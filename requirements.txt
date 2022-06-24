@@ -5,3 +5,4 @@ pytest
 sqlalchemy
 psycopg2
 python-multipart
+sqlmodel==0.0.4
