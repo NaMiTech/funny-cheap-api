@@ -5,8 +5,7 @@ exceptions = exc.sa_exc
 
 def get_event(db: Session, skip: int = 0, limit: int = 100):
     try:
-        return db.query(models.Evento).offset(skip).limit(limit).all()
-        
+        return db.query(models.Evento).offset(skip).limit(limit).all()        
     except exceptions.SQLAlchemyError as e:
         print("ERROR: %s" % e)
 
@@ -14,4 +13,10 @@ def get_event_by_id(db: Session, id: int):
     try:
         return db.query(models.Evento).filter(models.Evento.id == id).first()
     except exceptions.SQLAlchemyError as e:
+        print("ERROR: %s" % e)
+
+def get_active_events(db:Session, skip: int = 0, limit: int = 100):
+    try:
+        return db.query(models.Evento).filter(models.Evento.is_active == True).all()
+    except exceptions.SQLAlchemyError as e: 
         print("ERROR: %s" % e)

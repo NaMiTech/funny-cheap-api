@@ -23,3 +23,14 @@ class Evento(Base):
     direccion   = Column(String)
     asistentes  = Column(Integer)      
     is_active   = Column(Boolean, default=True)
+
+class Social(Base):
+    __table__ = "social"
+
+    id              = Column('id', Integer, primary_key = True, index = True)
+    count_visit     = Column(Integer, default = 0)
+    count_share     = Column(Integer, default = 0)
+    count_attendees = Column(Integer, default = 0)
+    count_like      = Column(Integer, default = 0) 
+    count_dislike   = Column(Integer, default = 0) 
+    event_id        = Column(Integer)
