@@ -12,4 +12,4 @@ jobs:
         with:
           creds: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
           src: org/local-image:build
-          dst: gcr.io/my-project/my-image:${{github.run_number}}-${{github.sha}}
+          dst: gcr.io/${{ secrets.PROYECT_ID }}/funcheap:${{github.run_number}}-${{github.sha}}
