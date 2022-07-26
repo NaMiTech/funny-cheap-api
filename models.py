@@ -15,7 +15,7 @@ class Evento(Base):
     titulo      = Column(String, index=True)
     resumen     = Column(String, index=True)
     descripcion = Column(String, index=True)
-    fechainicio  = Column(Date)
+    fechainicio = Column(Date)
     fechafin    = Column(Date)
     horainicio  = Column(Time)
     horafin     = Column(Time)
@@ -23,7 +23,7 @@ class Evento(Base):
     direccion   = Column(String)
     asistentes  = Column(Integer)      
     is_active   = Column(Boolean, default=True)
-
+'''
 class Social(Base):
     __table__ = "social"
 
@@ -34,3 +34,4 @@ class Social(Base):
     count_like      = Column(Integer, default = 0) 
     count_dislike   = Column(Integer, default = 0) 
     event_id        = Column(Integer)
+'''    

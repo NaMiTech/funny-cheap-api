@@ -6,3 +6,5 @@ sqlalchemy
 psycopg2
 python-multipart
 sqlmodel==0.0.4
+gunicorn==20.0.4
+starlette==0.14.2

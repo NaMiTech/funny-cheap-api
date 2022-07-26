@@ -1,0 +1,9 @@
+.github/
+__pycache__/
+database-data/
+.env
+.gitignore
+.gcloudignore
+*.yml
+README.md
+tables.txt
